@@ -54,12 +54,12 @@ $(document).ready(function() {
 	
 	function validateNumber() { 
 		var number = inputNumber.val();
-		var regex = /^(\+[0-9]{1,2}\-|\(\+[0-9]{1,2}\)|\+[0-9]{1,2}|[0-9]{2}\-|)[0-9]+$/;
+		var regex = /^[0-9]{1,10}$/;
 		  	if (number.length === 0) {
-			    alert("Please enter your Contact Number.");
+			    alert("Please enter your 10-digit Contact Number.");
 			    return ;
 			} else if (regex.test(number)) {
-			    alert("Contact Number can only have digits and special characters like (, ), +, -");
+			    alert("Contact Number can only have digits!");
 			    return;
 			} else if(name.length > 10) {
 			  	alert("Number beyond length - 10 digits");
